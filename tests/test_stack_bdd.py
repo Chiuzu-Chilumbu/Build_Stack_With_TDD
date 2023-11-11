@@ -7,6 +7,8 @@ sys.path.append('stack/Build_Stack_With_TDD/tests')
 import pytest 
 from pytest_bdd import scenario, given, when, then
 
+from stack_adt import Stack
+
 @scenario('features/create_stack.feature', 'Create a stack object from a stack class')
 def test_create_stack_object_from_class_stack():
 	pass
