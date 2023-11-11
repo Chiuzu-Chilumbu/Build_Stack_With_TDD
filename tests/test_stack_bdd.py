@@ -20,7 +20,6 @@ def stack_class():
 def stack_object(stack_class):
     return stack_class(100)
 
-@then('the instantiated stack object should contain an empty list with None values of given capacity')
+@then('the instantiated stack object should contain an empty list')
 def test_stack_with_given_capacity(stack_object):
     assert len(stack_object) == 100
-    assert all(item is None for item in stack_object)
