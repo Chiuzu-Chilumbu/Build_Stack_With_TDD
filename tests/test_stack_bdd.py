@@ -1,4 +1,4 @@
-"""bdd file for stack abstract datatype"""
+"""behavoural tests for stack abstract datatype"""
 
 import sys 
 sys.path.append('data')
