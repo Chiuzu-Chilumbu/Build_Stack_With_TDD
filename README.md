@@ -2,3 +2,4 @@
 Building the stack data structure using TDD &amp; BDD methodologies
 
 This repository was inspired by the RealPython tutorial: Build a Hash Table in Python With TDD
+Link: https://realpython.com/python-hash-table/#build-a-hash-table-prototype-in-python-with-tdd
