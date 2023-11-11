@@ -1,30 +1,26 @@
-"""behavoural tests for stack abstract datatype"""
+"""Behavioral tests for stack abstract datatype"""
 
 import sys 
 sys.path.append('data')
 sys.path.append('stack/Build_Stack_With_TDD/tests')
 
 import pytest 
-from pytest_bdd import scenario, given, when, then
-
+from pytest_bdd import scenarios, given, when, then
 from stack_adt import Stack
 
-@scenario('features/create_stack.feature', 'Create a stack object from a stack class')
-def test_create_stack_object_from_class_stack():
-	pass
+scenarios('features/create_stack.feature')
 
-
+@pytest.fixture
 @given('a stack class exists')
-def test_should_contain_a_stack_class():
-	pass
+def stack_class():
+    return Stack
 
-@when('a stack object is instanciated')
-def test_should_contain_an_object_created_from_stack_class():
-	stack_object = Stack()
-	assert stack_object is not None
+@pytest.fixture
+@when('a stack object is instantiated with the stack capacity')
+def stack_object(stack_class):
+    return stack_class(100)
 
-@then('the instanciated stack object should be an instance of the class')
-def test_should_contain_an_object_that_is_an_instance_of_the_stacak_class():
-	stack_object = Stack()
-	assert isinstance(stack_object, Stack)
-
+@then('the instantiated stack object should contain an empty list with None values of given capacity')
+def test_stack_with_given_capacity(stack_object):
+    assert len(stack_object) == 100
+    assert all(item is None for item in stack_object)
