@@ -1,39 +1,44 @@
 
 ---
 
-# Build Stack with TDD and BDD
+# Final Phase: Style Conformance with Pylint
 
-This repository details the development of a stack data structure, adhering to Test-Driven Development (TDD) and Behavior-Driven Development (BDD) methodologies.
+## Phase Five: Ensuring Code Excellence
 
-## Overview
+The `final_phase_style_lints` branch marks the culmination of our development process, focusing on enforcing style guidelines and code quality using `pylint`. This step underscores our commitment to maintaining a codebase that is not only functional but also clean, readable, and maintainable according to the highest standards of Python coding practices.
 
-A stack is a fundamental data structure that follows a Last In, First Out (LIFO) principle. Our stack implementation has been progressively enhanced through various phases of development, each focusing on expanding functionality, increasing test coverage, and ensuring code quality.
+### Style and Linting
 
-## Phase Four: Advanced Functionalities and Testing
+During this phase, we've integrated `pylint` into our workflow to systematically evaluate our code for potential errors, enforce a consistent coding style, and encourage best practices. This process has involved:
 
-In `phase_four`, we have introduced advanced functionalities to the stack, making it a comprehensive and fully-functional data structure:
+- Analyzing our existing codebase with `pylint`, identifying areas for improvement.
+- Refining code to adhere to the recommendations provided by `pylint`.
+- Setting up a linting step in our continuous integration pipeline to ensure that all future contributions meet the style requirements.
 
-- **Pop**: Removes and returns the top element of the stack.
-- **isEmpty**: Checks if the stack is empty, providing an immediate check for stack underflow.
-- **isFull**: Determines if the stack has reached its maximum capacity, preventing stack overflow.
+### How to Run Pylint
 
-These methods ensure our stack is versatile and robust, ready for integration into larger applications or systems.
-
-## Testing Enhancements
-
-Testing remains a cornerstone of our development process. We have refined our testing suite to encompass both unit tests and BDD tests, providing a rigorous validation for our stack's behavior:
-
-- Unit tests can be found in the `tests/` directory. They ensure the reliability of individual stack operations and can be executed using the `pytest` command.
-- BDD tests, formulated with `pytest-bdd` and Gherkin syntax, validate the stack's behavior in scenarios that mimic real-world use cases. These tests are also located within the `tests/` directory.
-
-To run the entire test suite and verify the functionality of the stack, use the command:
+To run `pylint` on the stack code and check for style and quality issues, use the following command from the root directory of the project:
 
 ```bash
-pytest tests/
+pylint stack_adt
 ```
 
-## Acknowledgments
+This command will output a report detailing the linting score and any suggestions for code improvement.
 
-This project was inspired by RealPython's tutorial on building a hash table with TDD. A special thanks to the tutorial for laying the groundwork for this repository's approach to TDD and BDD.
+### Final Codebase
+
+With the completion of this phase, the `main` branch now contains a fully implemented Stack ADT with comprehensive tests and a codebase polished to meet style guidelines. The stack is ready for production use and further development.
+
+### Contributions
+
+We welcome contributions that help improve the codebase and extend the functionality of the stack. We ask that all contributions:
+
+- Include tests that pass the existing suite.
+- Adhere to our coding and style standards, as verified by `pylint`.
+- Are accompanied by appropriate documentation updates.
+
+### Moving Forward
+
+As we merge this final phase into the `main` branch, we close the initial development cycle of our Stack ADT. Yet, the journey of improvement and adaptation continues.
 
 ---
