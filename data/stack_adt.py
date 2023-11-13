@@ -11,3 +11,16 @@ class Stack:
 	def __len__(self):
 		return self.capacity
 
+	def push(self, data):
+		if len(self.stack) == self.capacity:
+			raise Exception('Stack is full')
+		else:
+			self.stack.append(data)
+
+	def size(self):
+		return len(self.stack)
+
+	def peek(self):
+		return self.stack[-1]
+
+	
