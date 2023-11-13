@@ -1,36 +1,45 @@
-"""Implementation of Stack abstract data type"""
+
 
 class Stack:
-	def __init__(self, capacity):
-		if not isinstance(capacity, int):
-			raise TypeError('Stack Capacity must be an integer')
+    """Implementation of Stack abstract data type"""
 
-		self.capacity = capacity
-		self.stack = []
+    def __init__(self, capacity):
+        if not isinstance(capacity, int):
+            raise TypeError('Stack Capacity must be an integer')
 
-	def push(self, data):
-		if len(self.stack) == self.capacity:
-			raise Exception('Stack is full')
-		else:
-			self.stack.append(data)
+        self.capacity = capacity
+        self.stack = []
 
-	def pop(self):
-		if len(self.stack) == 0:
-			raise Exception('stack is empty')
-		else:
-			removed_item = self.stack.pop()
-		return removed_item
+    def push(self, data):
+        """
+        Add data to top of stack
+        Params -> Data : any python data type e.g. int, str e.t.c.
+        """
+        if len(self.stack) == self.capacity:
+            raise Exception('Stack is full')
+        else:
+            self.stack.append(data)
 
-	def size(self):
-		return len(self.stack)
+    def pop(self):
+        """Remove and return top most element in stack"""
+        if len(self.stack) == 0:
+            raise IndexError('cannot pop from empty stack')
+        else:
+            removed_item = self.stack.pop()
+        return removed_item
 
-	def peek(self):
-		return self.stack[-1]
+    def size(self):
+        """ Return size of stack"""
+        return len(self.stack)
 
-	def isEmpty(self):
-		return self.stack == []
+    def peek(self):
+        """ Return top most element in stack"""
+        return self.stack[-1]
 
-	def isFull(self):
-		return len(self.stack) == self.capacity
+    def isEmpty(self):
+        """ Return True if stack is empty else return False"""
+        return self.stack == []
 
-	
+    def isFull(self):
+        """ Return True if stack is full else return False"""
+        return len(self.stack) == self.capacity
