@@ -12,7 +12,7 @@ def test_should_create_instance_of_stack_with_given_capacity():
 	# Act 
 	stack_object = Stack(size)
 	# Assert 
-	assert len(stack_object) == 100
+	assert stack_object.capacity == 100
 
 
 def test_should_provide_capacity_only_with_int_data_type():
@@ -27,4 +27,4 @@ def test_should_contain_no_elements_in_created_stack_list():
 	# Arrange & Act 
 	stack_object = Stack(100)
 	# Assert
-	assert len(stack_object) == 100
+	assert stack_object.stack == []

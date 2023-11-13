@@ -8,9 +8,6 @@ class Stack:
 		self.capacity = capacity
 		self.stack = []
 
-	def __len__(self):
-		return self.capacity
-
 	def push(self, data):
 		if len(self.stack) == self.capacity:
 			raise Exception('Stack is full')
