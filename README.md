@@ -1,39 +1,63 @@
-
 ---
 
-# Build Stack with TDD and BDD
+# Stack ADT Built with TDD and BDD
 
-This repository details the development of a stack data structure, adhering to Test-Driven Development (TDD) and Behavior-Driven Development (BDD) methodologies.
+This repository showcases the development of a Stack Abstract Data Type (ADT) following rigorous Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices.
 
 ## Overview
 
-A stack is a fundamental data structure that follows a Last In, First Out (LIFO) principle. Our stack implementation has been progressively enhanced through various phases of development, each focusing on expanding functionality, increasing test coverage, and ensuring code quality.
+The Stack ADT implemented in this project adheres to the Last In, First Out (LIFO) principle. Throughout its development, we have adhered to a phased approach, progressively enhancing functionality, expanding test coverage, and refining code quality.
 
-## Phase Four: Advanced Functionalities and Testing
+## Development Phases
 
-In `phase_four`, we have introduced advanced functionalities to the stack, making it a comprehensive and fully-functional data structure:
+- **Phase One**: Established the project's structure and created foundational BDD tests.
+- **Phase Two**: Refined tests using `pytest-bdd` fixtures and enhanced assertions.
+- **Phase Three**: Expanded stack functionalities with `push`, `pop`, `isEmpty`, and `isFull` methods, and corresponding unit and BDD tests.
+- **Phase Four**: Added advanced functionalities and comprehensive tests, ensuring all stack operations are thoroughly validated.
+- **Final Phase**: Focused on code quality with `pylint`, reinforcing adherence to Python's styling conventions.
 
-- **Pop**: Removes and returns the top element of the stack.
-- **isEmpty**: Checks if the stack is empty, providing an immediate check for stack underflow.
-- **isFull**: Determines if the stack has reached its maximum capacity, preventing stack overflow.
+## Features
 
-These methods ensure our stack is versatile and robust, ready for integration into larger applications or systems.
+The stack supports a variety of operations, making it a robust data structure suitable for numerous applications:
 
-## Testing Enhancements
+- **Push**: Add an element to the stack.
+- **Pop**: Remove and return the top element.
+- **Peek**: Return the top element without removing it.
+- **isEmpty**: Check if the stack is empty.
+- **isFull**: Check if the stack has reached its maximum capacity.
+- **Size**: Get the number of elements in the stack.
 
-Testing remains a cornerstone of our development process. We have refined our testing suite to encompass both unit tests and BDD tests, providing a rigorous validation for our stack's behavior:
+## Testing
 
-- Unit tests can be found in the `tests/` directory. They ensure the reliability of individual stack operations and can be executed using the `pytest` command.
-- BDD tests, formulated with `pytest-bdd` and Gherkin syntax, validate the stack's behavior in scenarios that mimic real-world use cases. These tests are also located within the `tests/` directory.
+To ensure the reliability and correctness of the Stack ADT, a comprehensive test suite has been developed:
 
-To run the entire test suite and verify the functionality of the stack, use the command:
+- **Unit Tests**: Run `pytest tests/` to execute unit tests which verify individual operations.
+- **BDD Tests**: Implemented with `pytest-bdd`, allowing behavioral specifications to be written alongside the test code.
+
+## Linting
+
+Code quality is enforced through linting with `pylint`:
 
 ```bash
-pytest tests/
+pylint stack_adt
 ```
+
+Ensure to lint your code before committing changes to maintain a clean and consistent codebase.
+
+## How to Use
+
+Instructions on how to use the stack in your own projects are provided, including example code snippets and explanations of each method.
+
+## Contributions
+
+Contributions are welcome. We encourage contributors to adhere to the established practices:
+
+- Maintain the TDD and BDD approach.
+- Ensure all tests pass and add new tests for additional features.
+- Follow Python style guidelines and pass `pylint` checks.
 
 ## Acknowledgments
 
-This project was inspired by RealPython's tutorial on building a hash table with TDD. A special thanks to the tutorial for laying the groundwork for this repository's approach to TDD and BDD.
+Inspiration for this project came from RealPython's tutorial on TDD. We extend our gratitude for the guidance that shaped our testing approach.
 
 ---
