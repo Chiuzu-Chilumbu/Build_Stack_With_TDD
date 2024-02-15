@@ -1,4 +1,4 @@
-
+"""implementation of the stack data structure"""
 
 class Stack:
     """Implementation of Stack abstract data type"""
